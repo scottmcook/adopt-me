@@ -1,3 +1,6 @@
+import React from "react";
+import { createRoot } from "react-dom";
+
 function Pet(props) {
   return React.createElement("div", {}, [
     React.createElement("h1", {}, props.name),
@@ -32,5 +35,5 @@ const App = () => {
 const container = document.getElementById("root");
 // New way of rendering instead of ReactDOM.render.
 // It's also a way to opt into new features.
-const root = ReactDOM.createRoot(container);
+const root = createRoot(container);
 root.render(React.createElement(App));
