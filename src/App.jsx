@@ -1,36 +1,17 @@
 import React from "react";
-import { createRoot } from "react-dom";
+import { createRoot } from "react-dom/client";
+import SearchParams from "./SearchParams";
 
-function Pet(props) {
-  return React.createElement("div", {}, [
-    React.createElement("h1", {}, props.name),
-    React.createElement("h2", {}, props.animal),
-    React.createElement("h2", {}, props.breed),
-  ]);
-}
+
 
 // App and components are always capitalized.
 const App = () => {
-  return React.createElement(
-    "div",
-    {},
-    React.createElement("h1", {}, "Adopt Me!"),
-    React.createElement(Pet, {
-      name: "Laura",
-      animal: "Dog",
-      breed: "Australian Cattle Dog",
-    }),
-    React.createElement(Pet, {
-      name: "Moody",
-      animal: "Dog",
-      breed: "Australian Cattle Dog",
-    }),
-    React.createElement(Pet, {
-      name: "Binx",
-      animal: "Cat",
-      breed: "hocus",
-    })
-  );
+  return (
+    <div>
+      <h1>Adopt Me!</h1>
+      <SearchParams></SearchParams>
+    </div>
+  )
 };
 const container = document.getElementById("root");
 // New way of rendering instead of ReactDOM.render.
